@@ -1,0 +1,286 @@
+{
+  "dataset": "EuroSAT RGB",
+  "arch": "mobilenet_v3_large",
+  "input_size": 128,
+  "device": "mps",
+  "splits": {
+    "train": 18900,
+    "val": 4050,
+    "test": 4050
+  },
+  "best_val_acc": 0.9733333333333334,
+  "test_accuracy": 0.974320987654321,
+  "test_macro_f1": 0.9732609855557135,
+  "per_class": {
+    "AnnualCrop": {
+      "precision": 0.952,
+      "recall": 0.9689,
+      "f1-score": 0.9604
+    },
+    "Forest": {
+      "precision": 0.9825,
+      "recall": 0.9956,
+      "f1-score": 0.989
+    },
+    "HerbaceousVegetation": {
+      "precision": 0.967,
+      "recall": 0.9756,
+      "f1-score": 0.9712
+    },
+    "Highway": {
+      "precision": 0.9704,
+      "recall": 0.9627,
+      "f1-score": 0.9665
+    },
+    "Industrial": {
+      "precision": 0.9866,
+      "recall": 0.984,
+      "f1-score": 0.9853
+    },
+    "Pasture": {
+      "precision": 0.9564,
+      "recall": 0.95,
+      "f1-score": 0.9532
+    },
+    "PermanentCrop": {
+      "precision": 0.9672,
+      "recall": 0.944,
+      "f1-score": 0.9555
+    },
+    "Residential": {
+      "precision": 0.9889,
+      "recall": 0.9889,
+      "f1-score": 0.9889
+    },
+    "River": {
+      "precision": 0.9681,
+      "recall": 0.9707,
+      "f1-score": 0.9694
+    },
+    "SeaLake": {
+      "precision": 0.9978,
+      "recall": 0.9889,
+      "f1-score": 0.9933
+    }
+  },
+  "top_confusions": [
+    {
+      "true": "PermanentCrop",
+      "predicted": "AnnualCrop",
+      "count": 10
+    },
+    {
+      "true": "Highway",
+      "predicted": "River",
+      "count": 9
+    },
+    {
+      "true": "AnnualCrop",
+      "predicted": "PermanentCrop",
+      "count": 6
+    },
+    {
+      "true": "Pasture",
+      "predicted": "HerbaceousVegetation",
+      "count": 6
+    },
+    {
+      "true": "PermanentCrop",
+      "predicted": "HerbaceousVegetation",
+      "count": 6
+    }
+  ],
+  "confusion_matrix": {
+    "labels": [
+      "AnnualCrop",
+      "Forest",
+      "HerbaceousVegetation",
+      "Highway",
+      "Industrial",
+      "Pasture",
+      "PermanentCrop",
+      "Residential",
+      "River",
+      "SeaLake"
+    ],
+    "matrix": [
+      [
+        436,
+        0,
+        1,
+        2,
+        0,
+        3,
+        6,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        448,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        2,
+        439,
+        1,
+        0,
+        3,
+        3,
+        1,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0,
+        361,
+        0,
+        1,
+        1,
+        0,
+        9,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        2,
+        369,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        5,
+        3,
+        6,
+        0,
+        0,
+        285,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        10,
+        0,
+        6,
+        2,
+        1,
+        2,
+        354,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        4,
+        0,
+        0,
+        445,
+        0,
+        0
+      ],
+      [
+        3,
+        1,
+        0,
+        4,
+        0,
+        2,
+        1,
+        0,
+        364,
+        0
+      ],
+      [
+        0,
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        445
+      ]
+    ]
+  },
+  "history": [
+    {
+      "phase": "head",
+      "epoch": 1,
+      "train_loss": 0.7543712235253954,
+      "train_acc": 0.8386243386243386,
+      "val_loss": 0.5864466395790194,
+      "val_acc": 0.8972839506172839,
+      "seconds": 82.7
+    },
+    {
+      "phase": "head",
+      "epoch": 2,
+      "train_loss": 0.6206323212290568,
+      "train_acc": 0.8864550264550265,
+      "val_loss": 0.5372281557247962,
+      "val_acc": 0.9197530864197531,
+      "seconds": 51.3
+    },
+    {
+      "phase": "finetune",
+      "epoch": 1,
+      "train_loss": 0.5066907522035023,
+      "train_acc": 0.9293121693121693,
+      "val_loss": 0.41986513629371736,
+      "val_acc": 0.9607407407407408,
+      "seconds": 65.4
+    },
+    {
+      "phase": "finetune",
+      "epoch": 2,
+      "train_loss": 0.4300537176485415,
+      "train_acc": 0.9586772486772487,
+      "val_loss": 0.39610463561835113,
+      "val_acc": 0.9681481481481482,
+      "seconds": 55.6
+    },
+    {
+      "phase": "finetune",
+      "epoch": 3,
+      "train_loss": 0.4055309934212417,
+      "train_acc": 0.9653439153439154,
+      "val_loss": 0.3783922881991775,
+      "val_acc": 0.9728395061728395,
+      "seconds": 55.1
+    },
+    {
+      "phase": "finetune",
+      "epoch": 4,
+      "train_loss": 0.39309533910145833,
+      "train_acc": 0.97,
+      "val_loss": 0.37377518812815347,
+      "val_acc": 0.9733333333333334,
+      "seconds": 52.2
+    }
+  ],
+  "training_minutes": 6.1
+}
