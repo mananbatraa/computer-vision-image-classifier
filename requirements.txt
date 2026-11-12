@@ -1,0 +1,7 @@
+torch>=2.4
+torchvision>=0.19
+pillow>=10
+scikit-learn>=1.5
+numpy>=1.26
+streamlit>=1.40
+pytest>=8.0
